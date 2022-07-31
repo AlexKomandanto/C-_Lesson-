@@ -1,4 +1,3 @@
-﻿Console.Write("Введите ваше имя ");
-string username = Console.ReadLine();
-Console.Write("Привет, ");
-Console.Write(username);
+﻿double max = double.MaxValue;
+double min = double.MinValue;
+Console.WriteLine($"The range of double is {min} to {max}");
