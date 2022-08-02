@@ -39,6 +39,6 @@ Console.Write("input number: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 double number = numberA / 2;
 if ( number%2 == 0 )
-    Console.Write(numberA + " -> " + "yes" );
+    Console.Write(numberA + " -> " + "no even" );
 else 
-    Console.Write(numberA + " -> " + "no");    
+    Console.Write(numberA + " -> " + "yes even");    
