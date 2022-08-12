@@ -32,13 +32,54 @@
 
 // number%2 == 0
 
-// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным 
+//(делится ли оно на два без остатка).
 // 4 -> да
 
-Console.Write("input number: ");
-int numberA = Convert.ToInt32(Console.ReadLine());
-double number = numberA / 2;
-if ( number%2 == 0 )
-    Console.Write(numberA + " -> " + "no even" );
-else 
-    Console.Write(numberA + " -> " + "yes even");    
+// Console.Write("input number: ");
+// int numberA = Convert.ToInt32(Console.ReadLine());
+
+// if ( numberA % 2 == 0 )
+//     Console.Write(numberA + " -> " + "yes even" );
+// else 
+//     Console.Write(numberA + " -> " + "no even");    
+
+
+// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает
+// все чётные числа от 1 до N.
+
+// Console.Write("input number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int current = 2;
+// while (current <= num)
+// {
+//     Console.Write(current + " ");
+//     current = current +2;
+// }
+
+// Задача та же, с отрицательными числами:
+
+// Console.Write("input number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int current;
+// if (num > 0)
+// {
+//     current = 2;
+//     while (current <= num)
+//     {
+//       Console.Write(current + " ");
+//       current = current +2;  
+//     }
+// }
+// else
+// {
+//     current = 0;
+//     while (current >= num)
+//     {
+//         Console.Write(current + " ");
+//         current = current -2;
+//     }
+// }
+
+
