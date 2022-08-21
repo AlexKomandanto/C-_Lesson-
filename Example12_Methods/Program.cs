@@ -87,9 +87,9 @@
 //              + "Вы так красноречивы. Вы дадите мне чаю?”;
 
 
-//         // string s = "qwert"
-//         //             012
-//         // s[3] // r    
+        // string s = "qwert"
+        //             012
+        // s[3] // r    
 
 //  string Replace(string text, char oldValue, char newValue)
 //         {
@@ -109,8 +109,7 @@
 //         Console.WriteLine(newText);
 
 
-// string Replase(string text, char oldValue, char newValue)
-// {
+// string Replase(string text, char oldValue, char newValue){
 // string result = String.Empty;
 // int length = text.Length;
 // for (int i = 0; i < length; i++)
