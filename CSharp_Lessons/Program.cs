@@ -64,3 +64,42 @@
 //       Console.WriteLine("Точка находиться во второй четверти"); 
 // }
 
+// Задача 18: Напишите программу, которая по
+// заданному номеру четверти, показывает диапазон
+// возможных координат точек в этой четверти (x и y).
+/*
+Console.WriteLine("Ввведите номер четверти:");
+int field = Convert.ToInt32(Console.ReadLine());
+while (field>4 || field<1)
+{
+    Console.WriteLine("Ввведите номер четверти(это число от 1 до 4): ");
+    field = Convert.ToInt32(Console.ReadLine());
+}
+if (field == 1)
+{
+    Console.WriteLine("Точка находиться в первой четверти: x > 0 и y > 0 ");
+}
+else if (field == 2)
+{
+    Console.WriteLine("Точка находиться во второй четверти: x < 0 и y > 0 ");
+}
+else if (field == 3)
+{
+    Console.WriteLine("Точка находиться в третьей четверти: x < 0 и y < 0 ");
+}
+else
+{
+    Console.WriteLine("Точка находиться в четвертой четверти: x > 0 и y < 0 ");
+}
+*/
+
+// Задача 22: Напишите программу, которая
+// принимает на вход число (N) и выдаёт таблицу
+// квадратов чисел от 1 до N.
+/*
+Console.WriteLine("Ввведите число:");
+int number = Convert.ToInt32(Console.ReadLine());
+for (int i = 1; i <= number; i++){
+   Console.WriteLine(i + " -> " + i * i); 
+}
+*/

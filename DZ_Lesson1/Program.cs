@@ -108,7 +108,14 @@ if(num < 100){
     Console.Write(num + " -> " + "третьей цифры нет");
 }
 else{
-    int num1 = num % 100;
-    int num2 = num1 / 10;
-    Console.Write(num + " -> " + num2);
+    int [] array = {num };
+    int n = array.Length;
+    int index = 0;
+    if (array[index] == 3)
+    {
+        Console.Write(num + " -> " + num2);
+    }
+    // int num1 = num % 100;
+    // int num2 = num1 / 10;
+    // Console.Write(num + " -> " + num2);
 }

@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Example12_Methods
-build_property.ProjectDir = c:\Users\Komandanto\Desktop\test\C-_Lesson-\Example12_Methods\
+build_property.RootNamespace = CSharp_Lessons
+build_property.ProjectDir = C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\

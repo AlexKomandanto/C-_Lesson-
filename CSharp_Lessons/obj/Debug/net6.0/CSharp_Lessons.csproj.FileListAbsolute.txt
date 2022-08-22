@@ -1,0 +1,15 @@
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\bin\Debug\net6.0\CSharp_Lessons.exe
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\bin\Debug\net6.0\CSharp_Lessons.deps.json
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\bin\Debug\net6.0\CSharp_Lessons.runtimeconfig.json
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\bin\Debug\net6.0\CSharp_Lessons.dll
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\bin\Debug\net6.0\CSharp_Lessons.pdb
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.csproj.AssemblyReference.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.AssemblyInfoInputs.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.AssemblyInfo.cs
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.csproj.CoreCompileInputs.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.dll
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\refint\CSharp_Lessons.dll
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.pdb
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\CSharp_Lessons.genruntimeconfig.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\CSharp_Lessons\obj\Debug\net6.0\ref\CSharp_Lessons.dll
