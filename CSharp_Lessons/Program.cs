@@ -93,6 +93,33 @@ else
 }
 */
 
+// Задача 21: Напишите программу, которая
+// принимает на вход координаты двух точек и
+// находит расстояние между ними в 2D
+// пространстве.
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
+
+/*
+double SystemCoor( int x1, int y1, int x2, int y2, int x3, int y3){
+    return Math.Sqrt((x1 - x2 - x3) * (x1 - x2 - x3) + (y1 - y2 - y3) * (y1 - y2 - y3));
+}
+Console.WriteLine("Ввведите координату x1:");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ввведите координату y1:");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ввведите координату x2:");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ввведите координату y2:");
+int y2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ввведите координату x3:");
+int x3 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ввведите координату y3:");
+int y3 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Math.Round(SystemCoor(x1, y1, x2, y2, x3, y3), 3));
+*/
+
 // Задача 22: Напишите программу, которая
 // принимает на вход число (N) и выдаёт таблицу
 // квадратов чисел от 1 до N.
