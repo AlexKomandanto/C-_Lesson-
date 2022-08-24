@@ -1,0 +1,15 @@
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\bin\Debug\net6.0\Example13_RecursionAlgorithm.exe
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\bin\Debug\net6.0\Example13_RecursionAlgorithm.deps.json
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\bin\Debug\net6.0\Example13_RecursionAlgorithm.runtimeconfig.json
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\bin\Debug\net6.0\Example13_RecursionAlgorithm.dll
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\bin\Debug\net6.0\Example13_RecursionAlgorithm.pdb
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.csproj.AssemblyReference.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.AssemblyInfoInputs.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.AssemblyInfo.cs
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.dll
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\refint\Example13_RecursionAlgorithm.dll
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.pdb
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\Example13_RecursionAlgorithm.genruntimeconfig.cache
+C:\Users\Komandanto\Desktop\test\C-_Lesson-\Example13_RecursionAlgorithm\obj\Debug\net6.0\ref\Example13_RecursionAlgorithm.dll
