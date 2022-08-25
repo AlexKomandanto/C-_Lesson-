@@ -2,8 +2,8 @@
 // координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт
 // номер четверти плоскости, в которой находится эта
 // точка.
- 
- // Решение 1
+
+// Решение 1
 // Console.WriteLine("Ввведите координату X");
 // int x = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Ввведите координату y");
@@ -130,3 +130,90 @@ for (int i = 1; i <= number; i++){
    Console.WriteLine(i + " -> " + i * i); 
 }
 */
+
+// ЗАДАЧА 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+/*
+Console.WriteLine("Введите число А: ");
+int A = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+for (int i = 1; i <= A; i++)
+{
+    sum = sum + i;
+}
+Console.WriteLine(sum);*/
+/*
+Console.WriteLine("Введите число А: ");
+int A = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+int i = 1;
+while (i<=A)
+{
+    sum = sum + i;
+    i += 1;
+}
+    Console.WriteLine(sum); */
+
+/*  метод решения через функцию
+int SumNumbers(int num)
+{
+    int sum = 0;
+    for (int i = 1; i <= num; i++)
+        {
+            sum = sum + i;
+        }
+    return sum;
+}
+for (int i = 0; i < 5; i++)
+{
+    Console.Write("Введите число А: ");
+int A = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(A + " -> " + SumNumbers(A)); 
+}*/
+/*
+void SumNumbers(int num)
+{
+    int sum = 0;
+    for (int i = 1; i <= num; i++)
+        {
+            sum = sum + i;
+        }
+    Console.WriteLine(num + " -> " + sum); 
+}
+for (int i = 0; i < 5; i++)
+{
+    Console.Write("Введите число А: ");
+int A = Convert.ToInt32(Console.ReadLine());
+SumNumbers(A); 
+}*/
+
+int[] CreateRandomArray(int N, int start, int end)
+{
+    int[]RandomArray = new int[N];
+    for (int i = 0; i < N; i++)
+    {
+        RandomArray[i] = new Random().Next(start, end + 1);
+    }
+    return RandomArray;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+Console.Clear();
+Console.WriteLine("Введите колличество элементов в массиве: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число случайного диапозона: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите последнее число случайного диапозона: ");
+int max = Convert.ToInt32(Console.ReadLine());
+ int[] MyRandomArray = CreateRandomArray(num, min, max);
+ShowArray(MyRandomArray);
