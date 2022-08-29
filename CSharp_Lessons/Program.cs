@@ -188,7 +188,7 @@ for (int i = 0; i < 5; i++)
 int A = Convert.ToInt32(Console.ReadLine());
 SumNumbers(A); 
 }*/
-
+/*
 int[] CreateRandomArray(int N, int start, int end)
 {
     int[]RandomArray = new int[N];
@@ -217,3 +217,49 @@ Console.WriteLine("Введите последнее число случайно
 int max = Convert.ToInt32(Console.ReadLine());
  int[] MyRandomArray = CreateRandomArray(num, min, max);
 ShowArray(MyRandomArray);
+*/ 
+
+int[] CreateRandomArray(int N, int start, int end)
+{
+    int[]RandomArray = new int[N];
+    for (int i = 0; i < N; i++)
+    {
+        RandomArray[i] = new Random().Next(start, end + 1);
+    }
+    return RandomArray;
+}
+
+int[] CreateArray()
+{
+    Console.WriteLine("Введите колличество элементов массива: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    int[] RandomArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Ввeдите {i+1} элемент массива:");
+        RandomArray[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return RandomArray;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+Console.Clear();
+Console.WriteLine("Введите колличество элементов в массиве: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число случайного диапозона: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите последнее число случайного диапозона: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+ int[] MyRandomArray = CreateRandomArray(num, min, max);
+ShowArray(MyRandomArray);
+Console.WriteLine("------");
+int[] myArray = CreateArray();
+ShowArray(myArray);
