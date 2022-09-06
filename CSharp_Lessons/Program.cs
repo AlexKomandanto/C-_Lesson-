@@ -217,11 +217,11 @@ Console.WriteLine("Введите последнее число случайно
 int max = Convert.ToInt32(Console.ReadLine());
  int[] MyRandomArray = CreateRandomArray(num, min, max);
 ShowArray(MyRandomArray);
-*/ 
-
+*/
+/*
 int[] CreateRandomArray(int N, int start, int end)
 {
-    int[]RandomArray = new int[N];
+    int[] RandomArray = new int[N];
     for (int i = 0; i < N; i++)
     {
         RandomArray[i] = new Random().Next(start, end + 1);
@@ -236,7 +236,7 @@ int[] CreateArray()
     int[] RandomArray = new int[size];
     for (int i = 0; i < size; i++)
     {
-        Console.Write($"Ввeдите {i+1} элемент массива:");
+        Console.Write($"Ввeдите {i + 1} элемент массива:");
         RandomArray[i] = Convert.ToInt32(Console.ReadLine());
     }
     return RandomArray;
@@ -258,8 +258,77 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите последнее число случайного диапозона: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
- int[] MyRandomArray = CreateRandomArray(num, min, max);
+int[] MyRandomArray = CreateRandomArray(num, min, max);
 ShowArray(MyRandomArray);
 Console.WriteLine("------");
 int[] myArray = CreateArray();
 ShowArray(myArray);
+*/
+
+//   Примеры форматирования
+/*
+string name = "Имя";
+int age = 99;
+Console.WriteLine("Имя: {0} Возраст: {1}", name, age);
+*/
+/*
+int number = 24;
+string result = string.Format("{0:f}", number);
+Console.WriteLine(result);
+*/
+/*
+double number2 = 45.08;  // <- можно округлять до 5 символов после ,
+string result2 = string.Format("{0:f5}", number2);
+Console.WriteLine(number2);
+Console.WriteLine(result2);
+*/
+/*
+string name = "Имя";
+int age = 99;
+Console.WriteLine($"Имя: {name} Возраст: {age}");
+*/
+/*
+int x = 7;
+int y = 8;
+string result = $"{x} + {y} = {x + y}";
+Console.WriteLine(result);
+
+string name = "Алексей";
+int age = 34;
+Console.WriteLine($"Имя: {name, -10} Возраст: {age}"); // пробелы после
+Console.WriteLine($"Имя: {name, 15} Возраст: {age}"); // пробелы до
+*/
+// Задача 31: Задать массив из 12 эл-ов, заполненный случайными числами [-9,9],
+//  найти сумму отрицательных и положителных элементов.
+
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] RandomArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        RandomArray[i] = new Random().Next(min, max + 1);
+    }
+    return RandomArray;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+int[] myArray = CreateRandomArray(12, -9, 9);
+ShowArray(myArray);
+
+int sum_possitive = 0;
+int sum_negative = 0;
+for (int i = 0; i < myArray.Length; i++)
+{
+    if (myArray[i]>0)
+        sum_possitive += myArray[i];
+    else
+        sum_negative += myArray[i];
+}
+ Console.WriteLine($"Сумма положительных: {sum_possitive}. Сумма отрицательных: {sum_negative}");
