@@ -165,7 +165,7 @@ SelectionSort(arr);
 PrinrArray(arr);
 */
 //Задача:  Замена символов массива с макс до мин значения
-/*
+
 int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1 };
 
 void PrinrArray(int[] array)
@@ -197,5 +197,5 @@ PrinrArray(arr);
 SelectionSort(arr);
 
 PrinrArray(arr);
-*/
+
 

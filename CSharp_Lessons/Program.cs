@@ -300,7 +300,7 @@ Console.WriteLine($"Имя: {name, 15} Возраст: {age}"); // пробел�
 */
 // Задача 31: Задать массив из 12 эл-ов, заполненный случайными числами [-9,9],
 //  найти сумму отрицательных и положителных элементов.
-
+/*
 int[] CreateRandomArray(int size, int min, int max)
 {
     int[] RandomArray = new int[size];
@@ -332,3 +332,148 @@ for (int i = 0; i < myArray.Length; i++)
         sum_negative += myArray[i];
 }
  Console.WriteLine($"Сумма положительных: {sum_possitive}. Сумма отрицательных: {sum_negative}");
+*/
+
+// Задача 32: Замена элементов массива: положительные заменить на соответствующие отрицательные
+/*
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] RandomArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        RandomArray[i] = new Random().Next(min, max + 1);
+    }
+    return RandomArray;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+int[] myArray = CreateRandomArray(12, -9, 9);
+ShowArray(myArray);
+
+for (int i = 0; i < myArray.Length; i++)
+{
+    myArray[i]=myArray[i] * (-1);
+}
+ShowArray(myArray);
+*/
+
+// Задача 33: Задать массив и определить присутствует ли в нем заданное число.
+/*
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] RandomArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        RandomArray[i] = new Random().Next(min, max + 1);
+    }
+    return RandomArray;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+int[] myArray = CreateRandomArray(12, -9, 9);
+Console.Clear();
+Console.WriteLine("Введите число:");
+int N = Convert.ToInt32(Console.ReadLine());
+string str = "No";
+for (int i = 0; i < myArray.Length; i++)
+{
+    if (myArray[i]==N)
+    {
+        str = "Yes";
+        break;
+    }
+}
+Console.WriteLine(str);
+ShowArray(myArray);
+*/
+// это как без break реализовать
+// bool bool_arg= true
+// while (bool_arg && i<arr.Length)
+// {....
+// i++;
+// if (условие на выход)
+// bool_arg = false;
+// }
+
+// Задача 34 задать одномерный массив из 123 эл-ов. Найти кол-во элементов в диапозоне от 10 до 99
+/*
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] RandomArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        RandomArray[i] = new Random().Next(min, max + 1);
+    }
+    return RandomArray;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+int[] myArray = CreateRandomArray(123, 0, 500);
+Console.Clear();
+int N = 0;
+for (int i = 0; i < myArray.Length; i++)
+{
+    if (myArray[i]>9 && myArray[i]<99)
+    {
+        N++;
+    }
+}
+ShowArray(myArray);
+Console.WriteLine("Колличество элементов - "+ N);
+*/
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. 
+// Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+int[] list = new int[13];
+string result = String.Empty;
+
+for (int i = 0; i < list.Length; i++)
+{
+    list[i] = new Random().Next(1, 20);
+}
+
+void PrintArray(int[] col)
+{
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
+    {
+        Console.Write($"{col[position]} ");
+        position++;
+    }
+}
+PrintArray(list);
+Console.WriteLine();
+for (int i = 0; i < list.Length / 2; i++)
+{
+    result += $"{list[i] * list[list.Length - i - 1]}, ";
+}
+if (list.Length % 2 != 0) result += $"{list[list.Length / 2]}";
+
+Console.WriteLine(result);
+
+// Задача 39: Перевернуть массив(последний элемент на первое место, а первый на последнем)
+
