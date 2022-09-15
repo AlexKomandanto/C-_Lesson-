@@ -446,7 +446,7 @@ Console.WriteLine("Колличество элементов - "+ N);
 // Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
-
+/*
 int[] list = new int[13];
 string result = String.Empty;
 
@@ -474,6 +474,45 @@ for (int i = 0; i < list.Length / 2; i++)
 if (list.Length % 2 != 0) result += $"{list[list.Length / 2]}";
 
 Console.WriteLine(result);
-
+*/
 // Задача 39: Перевернуть массив(последний элемент на первое место, а первый на последнем)
 
+int[] GetArray(int size, int minValue, int maxValue)
+{
+    int[] res = new int[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        res[i] = new Random().Next(minValue, maxValue + 1);
+    }
+    return res;
+}
+
+void ReversArray1(int[] inArray)
+{
+    for (int i = 0; i < inArray.Length / 2; i++)
+    {
+        int k = inArray[i];
+        inArray[i] = inArray[inArray.Length - i - 1];
+        inArray[inArray.Length - i - 1] = k;
+    }
+}
+
+int[] ReversArray2(int[] inArray)
+{
+    int[] result = new int[inArray.Length];
+    for (int i = 0; i < inArray.Length; i++)
+    {
+        result[i] = inArray[inArray.Length - 1 - i];
+    }
+    return result;
+}
+Console.Clear();
+int[] array = GetArray(10, 0, 10);
+Console.WriteLine(String.Join(" ", array));
+
+int[] reversArray = ReversArray2(array);
+Console.WriteLine(String.Join(" ", reversArray));
+
+ReversArray1(array);
+Console.WriteLine(String.Join(" ", array));
