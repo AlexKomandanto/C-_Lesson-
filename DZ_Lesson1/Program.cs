@@ -341,23 +341,68 @@ void ShowArray(int[] array)
     }
     Console.WriteLine();
 }
-int[] myArray = CreateRandomArray(8, 1, 10);
+int[] myArray = CreateRandomArray(10, 1, 5);
 Console.Clear();
-int sum = 0;
 
-for (int i = 0; i < myArray.Length; i++)
+// int sum = 0;
+
+// for (int i = 1; i < myArray.Length; i=i+2)
+// {
+//     sum += myArray[i];
+// }
+// ShowArray(myArray);
+// Console.WriteLine("Сумма нечетных элементов - "+ sum);
+
+int sum_odd_index_nums = 0;
+for (int i = 1; i < myArray.Length; i=i+2)
 {
-    i = i + 2;
-    sum = sum + myArray[i];
+    sum_odd_index_nums += myArray[i];
 }
-ShowArray(myArray);
-Console.WriteLine("Сумма нечетных элементов - "+ sum);
+   ShowArray(myArray); 
+Console.WriteLine(sum_odd_index_nums);
 */
 
 // Задача 38: Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
-
+/*
+int[] CreateRandomArray(int size, int start, int end)
+{
+      int[] array = new int[size];
+      for (int i = 0; i < size; i++)
+         {
+            array[i] = new Random().Next(start, end + 1);
+         }
+      return array;
+}
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+int[] myArray = CreateRandomArray(15, 10, 99);
+ShowArray(myArray);
+int max = myArray[0];
+int min = myArray[0];
+for (int i = 0; i < myArray.Length; i++)
+{
+    if (myArray[i] >= max)
+    {max = myArray[i];}   
+}
+for (int i = 0; i < myArray.Length; i++)
+{
+    if (myArray[i] <= min)
+    {min = myArray[i];}
+}
+Console.WriteLine(max);
+Console.WriteLine(min);
+Console.WriteLine(max-min);
+*/
+// ЗАдача: на разворот массива
+/*
 int[] CreateRandomArray(int size, int min, int max)
 {
     int[] RandomArray = new int[size];
@@ -372,19 +417,98 @@ void ShowArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[i] + ", ");
+        Console.Write( array[i] + "  " );
     }
     Console.WriteLine();
 }
-int[] myArray = CreateRandomArray(7, 1, 10);
+int[] myArray = CreateRandomArray(10, 1, 5);
 Console.Clear();
-int min = 0;
-int max = 0;
-int N = 0;
-
-for (int i = 0; i < myArray.Length; i++)
-{
-
-}
 ShowArray(myArray);
-Console.WriteLine("Разница минимального и максимального элементов - "+ N );
+
+void ReversArray(int[] inArray)
+{
+    for (int i = 0; i < inArray.Length / 2; i++)
+    {
+        int k = inArray[i];
+        inArray[i] = inArray[inArray.Length - i - 1];
+        inArray[inArray.Length - i - 1] = k;
+    }
+}
+ReversArray(myArray);
+Console.WriteLine(String.Join("  ", myArray));
+*/
+//Задача 44: Не используя рекурсию,
+//  выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+
+
+//Задача 45: Напишите программу, 
+// которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте,
+//  сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, -567, 89, 223-> 3
+/*
+int[] CreateArray()
+{
+Console.WriteLine("Введите количество элементов массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] Array = new int[size];
+for (int i = 0; i < size; i++)
+{
+Console.WriteLine($"Введите {i+1} элемент массива");
+Array[i] = Convert.ToInt32(Console.ReadLine());
+}
+return Array;
+}
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++){
+        Console.Write(array[i]);
+        if (i<array.Length-1) {
+        Console.Write(", ");
+        }
+    }
+Console.WriteLine();
+}
+Console.Clear();
+Console.WriteLine("-------");
+int[] myArray = CreateArray();
+ShowArray(myArray);
+int positiv_count = 0;
+for (int i = 0; i<myArray.Length; i++)
+{
+if (myArray[i] > 0){
+    positiv_count += 1;
+    }    
+}
+Console.WriteLine($"Количество положительных элементов: -> {positiv_count}");
+*/
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых,
+//  заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+/*
+Console.Clear();
+Console.WriteLine("Введите k1 для прямой, заданной уравнением y = k1*x + b1: ");
+double k1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите b1 для прямой, заданной уравнением y = k1*x + b1: ");
+double b1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите k2 для прямой, заданной уравнением y = k2*x + b2: ");
+double k2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите b2 ля прямой, заданной уравнением y = k2*x + b2: ");
+double b2 = Convert.ToDouble(Console.ReadLine());
+if  (k1==k2 && b1 == b2) {
+    Console.WriteLine("Прямые совпадают");
+    }
+    else if (k1==k2 && b1 != b2){
+    Console.WriteLine("Прямые параллельны, точек пересечения нет");
+    }
+else{
+    double x = (b2-b1)/(k1-k2);
+    double y = x*k1 + b1;
+Console.WriteLine ($"k1 = {k1}, b1 = {b1}, k2 = {k2}, b2 = {b2} -> ({x}; {y})");
+}
+*/
+

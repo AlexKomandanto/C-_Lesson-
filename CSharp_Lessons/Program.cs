@@ -476,7 +476,7 @@ if (list.Length % 2 != 0) result += $"{list[list.Length / 2]}";
 Console.WriteLine(result);
 */
 // Задача 39: Перевернуть массив(последний элемент на первое место, а первый на последнем)
-
+/*
 int[] GetArray(int size, int minValue, int maxValue)
 {
     int[] res = new int[size];
@@ -516,3 +516,212 @@ Console.WriteLine(String.Join(" ", reversArray));
 
 ReversArray1(array);
 Console.WriteLine(String.Join(" ", array));
+*/
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет,
+// может ли существовать треугольник с сторонами такой длины.
+/*
+Console.WriteLine("Введите длину стороны А треугольника: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите длину стороны B треугольника: ");
+int B = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите длину стороны C треугольника: ");
+int C = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
+if ( A <= (B+C) && B<=(C+A) && C<=(A+B)){Console.WriteLine("Такой треугольник может существовать");}
+else{Console.WriteLine("Такого треугольника не существует");}
+*/
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+/*
+Console.WriteLine("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+string res = string.Empty;
+while (a > 0)
+{
+    res = (a % 2) + res;
+    a = a/2; 
+}
+Console.WriteLine(res);
+*/
+
+// Задача 46: Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// m = 3, n = 4.
+// 1 4 8 19
+// 5 -2 33 -2
+// 77 3 8 1
+/*
+int[,] GetArray(int m, int n, int minValue, int maxValue)  // Создаем двумерный массив , ставим [,] так
+                                                           // трех мерный массив, ставим [,,]
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      // row - ряд
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     // column - столбец
+        }
+        Console.WriteLine();
+    }
+}
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] array = GetArray(row, column, 0, 10);
+PrintArray(array);
+*/
+
+// Задача 48: Задайте двумерный массив размера m на n,
+// каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+/*
+int[,] GetArray(int m, int n)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = i + j;
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] array = GetArray(row, column, 0, 10);
+PrintArray(array);
+*/
+
+// Задача 49: Задайте двумерный массив. Найдите элементы,
+//  у которых оба индекса чётные, и замените эти элементы на их квадраты.
+/*
+int[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] array = GetArray(row, column, 0, 10);
+PrintArray(array);
+Console.WriteLine("--------------");
+for (int i = 0; i < row; i= i+2)      
+    {
+        for (int j = 0; j < column; j=j+2)
+        {
+            array[i,j] = array[i,j] * array[i,j];
+        }
+    }
+PrintArray(array);
+*/
+
+// Задача 51: Задайте двумерный массив. Найдите сумму элементов, 
+// находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+
+int[,] GetArray(int m, int n)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+              res[i,j] = i + j;
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] array = GetArray(row, column);
+PrintArray(array);
+
+int sum = 0;
+for (int i = 0; i < array.GetLength(0); i++)      
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+                if(i==j)sum = sum + array[i,j]; 
+        }
+    }
+Console.WriteLine(sum);
