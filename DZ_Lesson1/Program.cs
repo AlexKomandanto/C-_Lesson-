@@ -497,12 +497,12 @@ Console.WriteLine("Введите b1 для прямой, заданной ур�
 double b1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите k2 для прямой, заданной уравнением y = k2*x + b2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите b2 ля прямой, заданной уравнением y = k2*x + b2: ");
+Console.WriteLine("Введите b2 для прямой, заданной уравнением y = k2*x + b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 if  (k1==k2 && b1 == b2) {
     Console.WriteLine("Прямые совпадают");
     }
-    else if (k1==k2 && b1 != b2){
+else if (k1==k2 && b1 != b2){
     Console.WriteLine("Прямые параллельны, точек пересечения нет");
     }
 else{
@@ -511,4 +511,165 @@ else{
 Console.WriteLine ($"k1 = {k1}, b1 = {b1}, k2 = {k2}, b2 = {b2} -> ({x}; {y})");
 }
 */
+
+
+// Задача 47. Задайте двумерный массив размером m×n, 
+// заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+/*
+Console.Clear();
+
+double[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    double[,] res = new double[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().NextDouble()*(maxValue - minValue)+minValue;
+        }
+           
+    }
+    return res;
+}
+void PrintArray(double[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write($"{array[row, column]:f1}  ");     
+        }
+        Console.WriteLine();
+    }
+}
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+
+double [,] array = GetArray(row, column, -7, 7);
+
+PrintArray(array);
+*/
+
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+//  и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 17 -> такого числа в массиве нет
+/*
+Console.Clear();
+
+int[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+
+int [,] array = GetArray(row, column, 0, 50);
+PrintArray(array);
+
+Console.WriteLine("Введите индекс строки массива: ");
+int ind_a = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите индекс столбца массива: ");
+int ind_b = Convert.ToInt32(Console.ReadLine());
+
+if (ind_a < row && ind_b < column){
+    int N = array[ind_a, ind_b];
+    Console.WriteLine($"Значение запрашиваемого элемента: {N}");
+}
+else {
+    Console.WriteLine("Такой элемент отсутствует");
+}
+*/
+
+// Задача 52. Задайте двумерный массив из целых чисел.
+//  Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+/*
+int[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+
+int [,] array = GetArray(row, column, 0, 9);
+PrintArray(array);
+
+for (int j = 0; j < array.GetLength(1); j++)
+    {double sum = 0;
+        for (int i = 0; i < array.GetLength(0); i++)
+        {sum = sum + array[i,j];
+        }
+    Console.Write($"{(sum/row):f1}  ");
+    }
+*/
+
+
 

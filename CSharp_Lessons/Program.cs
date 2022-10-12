@@ -682,7 +682,7 @@ PrintArray(array);
 // 8 4 2 4
 // Сумма элементов главной диагонали: 1+9+2 = 12
 
-
+/*
 int[,] GetArray(int m, int n)  
 {
     int[,] res = new int[m,n];
@@ -725,3 +725,6 @@ for (int i = 0; i < array.GetLength(0); i++)
         }
     }
 Console.WriteLine(sum);
+*/
+
+
