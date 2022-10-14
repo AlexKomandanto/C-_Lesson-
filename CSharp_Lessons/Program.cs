@@ -727,4 +727,182 @@ for (int i = 0; i < array.GetLength(0); i++)
 Console.WriteLine(sum);
 */
 
+// Задача 53: Задайте двумерный массив. Напишите программу,
+//  которая поменяет местами первую и последнюю строку массива.
+/*
+int[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] array = GetArray(row, column, 1, 10);
+PrintArray(array);
+Console.WriteLine("--------------");
+void NewArray(int[,] inArray)
+{
+    int k = inArray.GetLength(0)-1;
+    for (int i = 0; i < inArray.GetLength(1); i++){
+        int n = inArray[0,i];
+        inArray[0,i] = inArray[k,i];
+        inArray[k,i] = n;
+    }
+PrintArray(inArray);    
+}    
+NewArray(array);
+*/
+
+// Задача 55: Задайте двумерный массив. Напишите программу,
+//  которая заменяет строки на столбцы. В случае, если это невозможно,
+//   программа должна вывести сообщение для пользователя.
+/*
+int[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] array1 = GetArray(row, column, 1, 10);
+PrintArray(array1);
+Console.WriteLine("--------------");
+int[,]array2 = new int[array1.GetLength(0), array1.GetLength(1)]; // создаем новый массив
+if (row == column)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            array2[j,i] = array1[i,j];
+        }
+    }
+    PrintArray(array2);
+}
+else
+Console.WriteLine("Неравное колличество строк и столбцов");
+*/
+
+// Задача 57: Составить частотный словарь элементов двумерного массива.
+//  Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+/*
+int[,] GetArray(int m, int n, int minValue, int maxValue)  
+{
+    int[,] res = new int[m,n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+             res[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+           
+    }
+    return res;
+}
+void PrintArray(int[,] array)
+{
+    for (int row = 0; row < array.GetLength(0); row++)      
+    {
+        for (int column = 0; column < array.GetLength(1); column++)
+        {
+            Console.Write( $"{array[row,column]} " );     
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.WriteLine("Введите колличество строк массива: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов массива: ");
+int column = Convert.ToInt32(Console.ReadLine());
+int [,] myArray = GetArray(row, column, 1, 10);
+PrintArray(myArray);
+Console.WriteLine("--------------");
+
+int count = 0;
+for (int element = 0; element < 10; element++)
+{   
+    count = 0;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            if (element == myArray[i,j])
+            {
+                count++;
+                Console.WriteLine($"{element} встречается {count} раз");
+            }
+        }
+    }
+}
+*/
+
+// Задача 61: Вывести первые N строк треугольника Паскаля. 
+// Сделать вывод в виде равнобедренного треугольника
+/*
+int no_row,c=1,blk,i,j;
+Console.WriteLine("Input number of rows: ");
+no_row = int.Parse(Console.ReadLine());
+for(i=0;i<no_row;i++)
+{
+    for(blk=1;blk<=no_row-i;blk++)
+    Console.Write(" ");
+    for(j=0;j<=i;j++)
+    {
+        if (j==0||i==0)
+            c=1;
+        else
+            c=c*(i-j+1)/j;
+        Console.Write(" "+c);
+    }
+    Console.Write("\n");
+}
+*/
 
