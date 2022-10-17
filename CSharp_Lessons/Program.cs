@@ -918,7 +918,9 @@ for (int i = 1; i<=N; i++)
     Console.Write($"{i} ");
 }
 Console.WriteLine();
+*/
 //с использованием метода void (вывод строкой)
+/*
 void PrintNumbers(int number)
 {
     for (int i = 1; i <= number; i++)
@@ -931,7 +933,9 @@ Console.Clear();
 Console.Write("Введите натуральное число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 PrintNumbers(N);
+*/
 //с использованием метода string
+/*
 string PrintNumbersStringType(int number)
 {
     string result = "";
@@ -945,6 +949,7 @@ Console.Clear();
 Console.Write("Введите натуральное число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(PrintNumbersStringType(N));
+*/
 /*
 //с рекурсией
 string PrintNumbersRecusiveType(int start, int end)
@@ -959,7 +964,9 @@ Console.Clear();
 Console.Write("Введите натуральное число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(PrintNumbersRecusiveType(1, N)) ;
+*/
 //Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+/*
 string PrintNumbersRecusiveType(int start, int end)
 {
     if (start == end)
@@ -974,10 +981,12 @@ int M = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите натуральное число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(PrintNumbersRecusiveType(M, N)) ;
+*/
 //Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
 //453 -> 12
 //45 -> 9
 //наше решение - сначала задача, потом метод. Можно сначала метод, потом задачу
+/*
 Console.Write("Введите натуральное число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"{N}->{SumNumbers(N)}");
@@ -1001,5 +1010,6 @@ int A = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input B: ");
 int B = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(PowNumbers(A, B));
-*/
+
 //Console.WriteLine($"answer -> {Math.Pow(A,B)}");
+*/

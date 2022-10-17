@@ -965,11 +965,11 @@ Console.WriteLine("Матрица: ");
 PrintMatrix(massive);
 Console.WriteLine();
 */
-
+/*
 Console.Clear();
 Console.Write("Введите размеры массива через пробел: ");
-string[] nums = ReadLine().Split(" ", StringSplitOptions,RemuveEmptyEntries);
-int[,,] array = GetArray(new int[] {int.Parse(nums[0]), int.Parse(nums[1]), int.Parse(nums[2])}, 10, 99);
+string[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+int[,,] array = GetArray(new int[] { int.Parse(nums[0]), int.Parse(nums[1]), int.Parse(nums[2]) }, 10, 99);
 PrintArray(array);
 
 int[,,] GetArray(int[] size, int min, int max)  
@@ -993,18 +993,38 @@ int[,,] GetArray(int[] size, int min, int max)
     }
     return result;
 }
-void PrintArray(int[,] array)
+bool FindElement(int[,,] arrae, int el)
 {
-    for (int row = 0; row < array.GetLength(0); row++)      
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int column = 0; column < array.GetLength(1); column++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write( $"{array[row,column]} " );     
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                if (array[i, j, k] == el) return true;
+            }
+        }
+    }
+    return false;
+}
+
+
+void PrintArray(int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)      
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write( $"{array[i, j, k]} ({i},{j},{k})  " );     
+            }
+            Console.WriteLine();
         }
         Console.WriteLine();
     }
 }
-
+*/
 
 // Задача 62. Заполните спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
